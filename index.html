@@ -17,13 +17,29 @@
 </head>
 
 <body>
-  <main class="mt-5">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+  <form class="mt-5">
+    <div class="container col-lg-6">
+      <div class="text-center">
+        <img src="img/login.png"style="width: 350px;" alt="logo">
+      </div>
+      <div class="card-body p-md-5 mx-md-4">
+        <h2 style="text-align: center;"> <strong>Inicio de sesion</strong> </h2>
+        <div id="user"></div>
+        <div class="mb-4">
+          <label class="usuario" for="usuario">Correo electronico</label>
+          <input type="usuario" id="usuario" class="form-control" placeholder="Correo electronico" required />
+        </div>
+        <div id="contraseña"></div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="contraseña">Contraseña</label>
+          <input type="password" id="contraseña" class="form-control" placeholder="Contraseña" minlength="8" required/>
+        </div>
+        <div class="button-form">
+          <button type="button" id="btn" class="btn btn-sm" style="background-color:rgb(255, 255, 255); border: solid 2px rgb(221, 220, 220);">Iniciar sesion</button>
+        </div>
       </div>
     </div>
-  </main>
+  </form>
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
