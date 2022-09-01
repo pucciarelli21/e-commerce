@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let vacio = "";
         let contra = ""
         let entrar = false
-        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/ // Validacion de estructura de email
         if (regexEmail.test(usuario.value) == "" || contraseña.value == "") {
             vacio += `
                     <div style="color: red;">

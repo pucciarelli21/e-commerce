@@ -41,3 +41,32 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+// Local storage - Guardado de usuario
+
+function muestroUser() {;
+  let emailValue = localStorage.getItem("email");
+  if (emailValue !== null) {
+  let nombreUsuario = document.getElementById("muestroEmail");
+  nombreUsuario.innerHTML += emailValue;
+  }
+}
+
+// Limpia el localStorage
+function cerrarSesion() {
+  localStorage.removeItem("email");
+  location.href = "index.html"
+}
+
+// Se muestra el usuario
+
+document.addEventListener("DOMContentLoaded", function() {
+  muestroUser()
+});
+
+
+//Local storage de la identidad de la categoria seleccionada
+function setCatID(id) {
+  localStorage.setItem("catID", JSON.parse(id));
+  window.location = "products.html"
+}

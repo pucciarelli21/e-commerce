@@ -1,14 +1,18 @@
+// Se obtiene la id de la cateogira
+
+id = localStorage.getItem("catID")
+
 // Fetch
 
 document.addEventListener("DOMContentLoaded", async function(){
-    let autos = await getJSONData(CAT_AUTOS);
-    if(autos.status === "ok"){
-        data = autos.data.products
-        productos(data);
+    let listaProductos = await getJSONData(`https://japceibal.github.io/emercado-api/cats_products/${id}.json`);
+    if(listaProductos.status === "ok"){
+        data = listaProductos.data.products
     }
+    productos(data)
     document.getElementById("productos").addEventListener("click", function(){
-        window.location = "product-info.html"
-    })
+    window.location = "product-info.html"
+})
 })
 
 // Impresion de productos
