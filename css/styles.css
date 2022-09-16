@@ -231,3 +231,67 @@ a.custom-card:hover {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #2db1a6;}
+
+#tarjeta{
+  box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Card de descripcion de productos*/
+#descripcion h2{
+  font-family:'Franklin Gothic medium';
+  margin: 20px;
+}
+
+#descripcion h4{
+  padding-top: 30px;
+}
+
+#descripcion h1{
+  font-family:Georgia;
+}
+
+#descripcion .desc{
+  padding-top: 50px;
+}
+
+#info-prod img{
+  width: auto;
+}
+
+#tarjeta{
+  background-color: #f3f3f3;
+}
+
+#prod-relacionados{
+  display: inline-flex;
+  justify-content: center;
+}
+
+#prod-relacionados .card{
+  height: 200px;
+  box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#prod-relacionados img{
+  margin-top: 20px;
+}
+
+#comentarios{
+  box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#comentarios card{
+  box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  width: 700px;
+
+}
+
+#descripcion-comentario{
+  width: 600px;
+  height: 150px;
+}
+
+#puntaje{
+  width: 200px;
+}

@@ -140,7 +140,7 @@ function productos (data){
             (buscador == undefined) || ((nombreProducto.includes(buscador)))) {
 
         body+=`
-        <div onclick="setCatID(${data[i].id})" class="list-group-item list-group-item-action cursor-active">
+        <div onclick="setProdID(${data[i].id})" class="list-group-item list-group-item-action cursor-active">
             <div class="row">
                 <div class="col-3">
                     <img src="${data[i].image}" alt="" class="img-thumbnail">

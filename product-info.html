@@ -46,11 +46,74 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <div class="container p-4">
+      <div>
+        <div class="row" id="tarjeta">
+          <div class="col">
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+  
+              <!-- Indicators/dots -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3" ></button>
+              </div>
+  
+              <!-- The slideshow/carousel -->
+              <div class="carousel-inner active" id="info-prod">
+              </div>
+              <!-- Left and right controls/icons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="container">
+              <div id="descripcion">
+  
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="container p-5 text-center">
+        <h2>Productos relacionados</h2>
+        <div id="prod-relacionados">
+        </div>
+      </div>
+      <h3>Comentarios</h3>
+      <div class="container">
+        <div class="card bg-dark mb-3" id="comentarios" style="margin-bottom: 50px;"></div>
+<!--Formulario para escribir un comentario nuevo-->
+        <form id="formulario">
+          <div class="dropdown">
+            <label for="label">¡Dejanos tu opinión!</label>
+            <!--ícono-->
+            <i class="fas fa-comment-dots"></i>
+            <label class="form-control" id="descripcion-comentario" rows="5" placeholder="Ingrese aquí su comentario"></label>
+          </div>
+          <div class="form-group">
+            <label for="score">Seleccione un puntaje del 1-5</label>
+            <select class="form-control" id="puntaje">
+              <option disabled selected>Seleccione un puntaje</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <!--Botón que al clickear guarda el comentario nuevo-->
+          <button type="button" class="btn btn-primary mb-2" onclick="nuevoComentario()">Enviar</button>
+        </form>
     </div>
+    
   </main>
   <footer class="text-muted">
     <div class="container">
