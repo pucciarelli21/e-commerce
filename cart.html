@@ -13,7 +13,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
+    <div class="container col-12 ">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,19 +38,91 @@
         <div class="dropdown-content">
           <a href="cart.html">Ver mi carrito</a>
           <a href="my-profile.html">Mi perfil</a>
-          <!-- Al hacer click se llama a la función que limpia el local storage y redirige al login -->
+          <!--Al hacer click se llama a la función que limpia el local storage y redirige al login-->
           <a href="#" onclick="cerrarSesion()">Cerrar sesión</a>
         </div>
       </div>
     </div>
   </nav>
-  <main>
+  <main class="container-fluid">
+    <div class="container mt-5 p3">
+      <div class="text-center p4">
+        <h2>Carrito de compras</h2>
+      </div>
+      <h4>Articulos a comprar</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Costo</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="compras">
+
+        </tbody>
+      </table>
+    </div>
+    <hr>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div class="col-10 p-4 text-end">
+        <h4>Total a pagar <span> <strong id="total"> USD 39900</strong></span></h4>
+      </div>
+      <h3>Tipo de envio</h3>
+      <div>
+        <input type="radio" id="premium" name="descuentos" value="premium" checked>
+        <label for="premium"><span>Premium 2 a 5 dias (15%)</label>
+      </div>
+
+      <div>
+        <input type="radio" id="express" name="descuentos" value="express">
+        <label for="express">Espress 5 a 8 dias (7%)</label>
+      </div>
+
+      <div>
+        <input type="radio" id="standar" name="descuentos" value="standar">
+        <label for="standar">Standard 12 a 15 dias (5%)</label>
       </div>
     </div>
   </main>
+  <form action="" >
+    <div class="container container-fluid g-4">
+      <div class="row">
+        <div class="col-12 col-mb-8 col-lg-5 p-3 ">
+          <label for="direccion" class="form-label">
+            <h5>Direccion</h5>
+          </label>
+          <input type="text" name="direccion" id="direccion" class="form-control">
+        </div>
+        <div class="col-6 col-mb-8 col-lg-3 col-lg-m-0 p-3">
+          <label for="telefono" class="form-label">
+            <h5>Telefono</h5>
+          </label>
+          <input type="text" name="telefono" id="telefono" class="form-control">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-6 sm-9 col-mb-8 col-lg-2 col-lg-m-0 p-3">
+          <label for="detalles" class="form-label"><h5>Mas detalles</h5></label>
+          <textarea name="" id="" cols="30" rows="5"></textarea>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" id="exito">Comprar</button>
+    </div>
+    
+    
+    
+  </form>
+  
+  <div class="container">
+    <div class="col-12 col-mb-8 col-lg-2 col-lg-m-0 p-3" id="alerta">
+
+    </div>
+  </div>
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">

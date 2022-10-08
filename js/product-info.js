@@ -6,7 +6,7 @@ let comentarios = [];
 function mostrarImagenes(array) {
     carrusel =  `
         <div class="carousel-item active">
-        <img src="${array.images[0]}" alt="" class="d-block w-100  img-fluid">
+        <img src="${array.images[0]}" alt="" class=" d-block w-100  img-fluid">
         </div>
     `
     nombreCarruselProd = ""
@@ -20,16 +20,17 @@ function mostrarImagenes(array) {
                     <h4>${array.description}</h4>
                 </div>
             </div>
-            <div class="desc">
-                <h1>Precio: ${array.cost} ${array.currency}</h1
-                <h4>Total vendidos ${array.soldCount}</h4>
+                <h2 class="col-12 col-lg-12 p-0">Precio: ${array.currency} ${array.cost}</h2>
+            <div class="d-flex">
+                <h5 class="col-8 p-0">Total vendidos ${array.soldCount}</h5>
+                <button class="btn col-5 col-lg-4"><h3>Comprar</h3></button>
             </div>
                 `
     for (let i = 1; i < array.images.length; i++) {
         let image = array.images
         carrusel += `
             <div class="carousel-item">
-              <img src="${image[i]}" alt="" class="d-block w-100  img-fluid">
+              <img src="${image[i]}" alt="" class="d-block w-100 img-fluid">
             </div>
             
         `
@@ -48,7 +49,7 @@ function mostrarRelatedProducts(array) {
     for (let i = 0; i < array.relatedProducts.length; i++) {
         let prodRelacionado = array.relatedProducts[i];
         contenidoHTML += `
-    <div class="col-2" style="margin:10px 10px 0px 10px;" onclick="setProdID(${prodRelacionado.id})">   
+    <div class="col-8 col-lg-6 btn container" style="margin:10px 10px 0px 10px;" onclick="setProdID(${prodRelacionado.id})">   
         <div class="card">
         <img src=" `+ prodRelacionado.image + `" class="card-img-top" alt="Imagen">
             <div class="card-body">
@@ -61,6 +62,7 @@ function mostrarRelatedProducts(array) {
 
     }
 }
+
 
 
 
@@ -101,14 +103,14 @@ function mostrarComentarios() {
                     <p class="card-text">${comentario.description}</p>
                     <p class="card-text"> ${estrellas(comentario.score)}</p>
                     <h6 class="card-subtitle mb-2 text-muted">${comentario.dateTime}</h6>
-                    
+                
              </div>      
         </div>`
 
     }
 
     document.getElementById("comentarios").innerHTML = html;
-    document.getElementById("formulario").reset(); 
+    document.getElementById("formulario").reset();
 }
 
 //Funcion que crea la puntuacion en fotma de estrella
@@ -139,8 +141,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     mostrarRelatedProducts(product)
 
     let c = await getJSONData(PRODUCT_INFO_COMMENTS_URL);
-        if (c.status === "ok") {
-            comentarios = c.data;
-            mostrarComentarios(comentarios);
-        }
+    if (c.status === "ok") {
+        comentarios = c.data;
+        mostrarComentarios(comentarios);
+    }
 });

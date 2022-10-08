@@ -10,7 +10,12 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
+<style>
+
+</style>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
@@ -39,17 +44,17 @@
         <div class="dropdown-content">
           <a href="cart.html">Ver mi carrito</a>
           <a href="my-profile.html">Mi perfil</a>
-          <!-- Al hacer click se llama a la función que limpia el local storage y redirige al login -->
+          <!--Al hacer click se llama a la función que limpia el local storage y redirige al login-->
           <a href="#" onclick="cerrarSesion()">Cerrar sesión</a>
         </div>
       </div>
     </div>
   </nav>
-  <main>
-    <div class="container p-4">
-      <div>
-        <div class="row" id="tarjeta">
-          <div class="col">
+  <main class="container-fluid">
+    <div>
+      <div class="container">
+        <div class="row m-4" style="box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);" id="tarjeta">
+          <div class="container p-4 col-12 col-lg-5">
             <!-- Carousel -->
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
   
@@ -73,7 +78,7 @@
               </button>
             </div>
           </div>
-          <div class="col">
+          <div class="col-12 col-lg-5 col-p-0 col-m-0">
             <div class="container">
               <div id="descripcion">
   
@@ -82,26 +87,27 @@
           </div>
         </div>
       </div>
-      <div class="container p-5 text-center">
+      <div class="container p-5 ga col-12 col-lg-5">
         <h2>Productos relacionados</h2>
         <div id="prod-relacionados">
         </div>
       </div>
-      <h3>Comentarios</h3>
+        
       <div class="container">
+        <h3>Sección de comentarios</h3>
         <div class="card bg-dark mb-3" id="comentarios" style="margin-bottom: 50px;"></div>
-<!--Formulario para escribir un comentario nuevo-->
+        <!--Formulario para escribir un comentario nuevo-->
         <form id="formulario">
-          <div class="dropdown">
+          <div class="dropdown col-12 col-lg-4">
             <label for="textarea">¡Dejanos tu opinión!</label>
             <!--ícono-->
             <i class="fas fa-comment-dots"></i>
-            <textarea type="text" class="form-control" id="descripcion-comentario" rows="5" placeholder="Ingrese aquí su comentario"></textarea>
+            <textarea class="form-control" id="descripcion-comentario" rows="5" placeholder="Ingrese aquí su comentario"></textarea>
           </div>
-          <div class="form-group">
+          <div class="form-group col-9 col-lg-3 p-3">
             <label for="score">Seleccione un puntaje del 1-5</label>
             <select class="form-control" id="puntaje">
-              <option disabled selected>Seleccione un puntaje</option>
+              <option disabled selected>Seleccione un número</option>
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -110,6 +116,7 @@
             </select>
           </div>
           <!--Botón que al clickear guarda el comentario nuevo-->
+          <!--Desafiate-->
           <button type="button" class="btn btn-primary mb-2" onclick="nuevoComentario()">Enviar</button>
         </form>
     </div>
@@ -136,6 +143,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

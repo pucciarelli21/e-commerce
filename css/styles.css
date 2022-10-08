@@ -280,12 +280,6 @@ a.custom-card:hover {
   box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-#comentarios card{
-  box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
-  align-items: center;
-  width: 700px;
-
-}
 
 #descripcion-comentario{
   width: 600px;
