@@ -4,7 +4,7 @@ let comentarios = [];
 
 //Funcion que imprime el carrusel y data del producto
 function mostrarImagenes(array) {
-    carrusel =  `
+    carrusel = `
         <div class="carousel-item active">
         <img src="${array.images[0]}" alt="" class=" d-block w-100  img-fluid">
         </div>
@@ -23,7 +23,6 @@ function mostrarImagenes(array) {
                 <h2 class="col-12 col-lg-12 p-0">Precio: ${array.currency} ${array.cost}</h2>
             <div class="d-flex">
                 <h5 class="col-8 p-0">Total vendidos ${array.soldCount}</h5>
-                <button class="btn col-5 col-lg-4"><h3>Comprar</h3></button>
             </div>
                 `
     for (let i = 1; i < array.images.length; i++) {
@@ -34,7 +33,7 @@ function mostrarImagenes(array) {
             </div>
             
         `
-        document.getElementById("info-prod").innerHTML = carrusel; 
+        document.getElementById("info-prod").innerHTML = carrusel;
     }
     document.getElementById("descripcion").innerHTML = description;
 }
@@ -58,7 +57,7 @@ function mostrarRelatedProducts(array) {
         </div>
     </div>
         `
-    document.getElementById("prod-relacionados").innerHTML = contenidoHTML;
+        document.getElementById("prod-relacionados").innerHTML = contenidoHTML;
 
     }
 }
@@ -139,7 +138,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     mostrarImagenes(product)
     mostrarRelatedProducts(product)
-
     let c = await getJSONData(PRODUCT_INFO_COMMENTS_URL);
     if (c.status === "ok") {
         comentarios = c.data;

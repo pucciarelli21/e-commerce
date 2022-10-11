@@ -1,5 +1,5 @@
 catID = localStorage.getItem("catID");
-prodID = localStorage.getItem("prodID")
+prodID = localStorage.getItem("prodID");
 
 const CATEGORIES_URL = "https://japceibal.github.io/emercado-api/cats/cat.json";
 const PUBLISH_PRODUCT_URL = "https://japceibal.github.io/emercado-api/sell/publish.json";
