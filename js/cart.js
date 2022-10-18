@@ -1,10 +1,9 @@
 let compra = document.getElementById("compras");
-const inputCantidad = document.getElementById("cantBuy");
 let compras = [];
 let button = document.getElementById("exito");
 
+//Funcion que crear el formato visual del carrito
 function mostrarCompra(array) {
-
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
         lista = `
@@ -18,10 +17,11 @@ function mostrarCompra(array) {
         `
         compra.innerHTML = lista;
         subTotal(element);
-        descuentos();
+        costEnvio();
     }
 }
 
+//funcion que calcula el subtotal
 function subTotal(array) {
     document.getElementById("cantBuy").addEventListener("click", () => {
         let costo = array.unitCost;
@@ -35,24 +35,25 @@ function subTotal(array) {
     })
 }
 
-function descuentos() {
+//funcion que realiza los impuestos por costo de envio
+function costEnvio() {
     let premium = document.getElementById("premium");
     let express = document.getElementById("express");
     document.addEventListener("click", () => {
         if (premium.checked) {
-            let precio = localStorage.getItem("total");
-            descuento = precio * (15 / 100)
-            total = precio - descuento
+            let precio = JSON.parse(localStorage.getItem("total"));
+            impuestoEnvio = precio * (15 / 100)
+            total = precio + impuestoEnvio
             document.getElementById("total").innerHTML = "USD " + total
         } else if (express.checked) {
-            let precio = localStorage.getItem("total");
-            descuento = precio * (7 / 100)
-            total = precio - descuento
+            let precio = JSON.parse(localStorage.getItem("total"));
+            impuestoEnvio = precio * (7 / 100)
+            total = precio + impuestoEnvio
             document.getElementById("total").innerHTML = "USD " + total
         } else {
-            let precio = localStorage.getItem("total");
-            descuento = precio * (5 / 100)
-            total = precio - descuento
+            let precio = JSON.parse(localStorage.getItem("total"));
+            impuestoEnvio = precio * (5 / 100)
+            total = precio + impuestoEnvio
             document.getElementById("total").innerHTML = "USD " + total
         }
     });
@@ -65,12 +66,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (prodBuy.status === "ok") {
         compras = prodBuy.data.articles;
         mostrarCompra(compras);
-        descuentos(compras);
+        costEnvio(compras);
     }
 
     let data = await getJSONData(CART_BUY_URL);
     if (data.status === "ok") {
         let exito = data.data.msg;
+        
+        //Boton que realiza la compra
         button.addEventListener("click", () => {
             if (!button.click()) {
                 alerta = `
