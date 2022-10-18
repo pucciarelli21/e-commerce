@@ -233,7 +233,7 @@ a.custom-card:hover {
 .dropdown:hover .dropbtn {background-color: #2db1a6;}
 
 #tarjeta{
-  box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Card de descripcion de productos*/
@@ -263,29 +263,13 @@ a.custom-card:hover {
 }
 
 #prod-relacionados{
-  display: inline-flex;
-  justify-content: center;
+display: flex;
 }
 
 #prod-relacionados .card{
-  height: 200px;
-  box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-#prod-relacionados img{
-  margin-top: 20px;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 #comentarios{
   box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-
-#descripcion-comentario{
-  width: 600px;
-  height: 150px;
-}
-
-#puntaje{
-  width: 200px;
 }

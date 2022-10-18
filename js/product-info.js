@@ -48,7 +48,7 @@ function mostrarRelatedProducts(array) {
     for (let i = 0; i < array.relatedProducts.length; i++) {
         let prodRelacionado = array.relatedProducts[i];
         contenidoHTML += `
-    <div class="col-8 col-lg-6 btn container" style="margin:10px 10px 0px 10px;" onclick="setProdID(${prodRelacionado.id})">   
+    <div class="btn" style="margin:10px 10px 0px 10px;" onclick="setProdID(${prodRelacionado.id})">   
         <div class="card">
         <img src=" `+ prodRelacionado.image + `" class="card-img-top" alt="Imagen">
             <div class="card-body">
