@@ -44,7 +44,7 @@
       </div>
     </div>
   </nav>
-  <main class="container-fluid">
+  <div class="container-fluid m-0">
     <div class="container mt-5 p3">
       <div class="text-center p4">
         <h2>Carrito de compras</h2>
@@ -67,13 +67,11 @@
     </div>
     <hr>
     <div class="container">
-      <div class="col-10 p-4 text-end">
-        <h4>Total a pagar <span> <strong id="total"> USD 39900</strong></span></h4>
-      </div>
-      <h3>Tipo de envio</h3>
+      <h4>Tipo de envio</h4>
+      
       <div>
-        <input type="radio" id="premium" name="descuentos" value="premium" checked>
-        <label for="premium"><span>Premium 2 a 5 dias (15%)</label>
+        <input type="radio" id="standar" name="descuentos" value="standar" checked>
+        <label for="standar">Standard 12 a 15 dias (5%)</label>
       </div>
 
       <div>
@@ -82,80 +80,171 @@
       </div>
 
       <div>
-        <input type="radio" id="standar" name="descuentos" value="standar">
-        <label for="standar">Standard 12 a 15 dias (5%)</label>
+        <input type="radio" id="premium" name="descuentos" value="premium">
+        <label for="premium"><span>Premium 2 a 5 dias (15%)</label>
       </div>
-    </div>
-  </main>
-  <form action="">
-    <div class="container container-fluid g-4">
-      <div class="row">
-        <div class="col-12 col-mb-8 col-lg-5 p-3 ">
-          <label for="direccion" class="form-label">
-            <h5>Direccion</h5>
-          </label>
-          <input type="text" name="direccion" id="direccion" class="form-control">
-        </div>
-        <div class="col-12 col-mb-8 col-lg-1 p-3 ">
-          <label for="numero" class="form-label">
-            <h5>Numero</h5>
-          </label>
-          <input type="text" name="numero" id="numero" class="form-control">
-        </div>
-        <div class="col-12 col-mb-8 col-lg-5 p-3 ">
-          <label for="esquina" class="form-label">
-            <h5>Esquina</h5>
-          </label>
-          <input type="text" name="esquina" id="esquina" class="form-control">
-        </div>
-      </div>
-      <div class="row d-grid">
-        <div class="col-6 col-mb-8 col-lg-3 col-lg-m-0 p-3">
-          <label for="telefono" class="form-label">
-            <h5>Telefono</h5>
-          </label>
-          <input type="text" name="telefono" id="telefono" class="form-control">
-        </div>
-        <div class="col-6 sm-9 col-mb-8 col-lg-2 col-lg-m-0 p-3">
-          <label for="detalles" class="form-label">
-            <h5>Mas detalles</h5>
-          </label>
-          <textarea name="" id="" cols="30" rows="5"></textarea>
-        </div>
-      </div>
-      <button class="btn btn-primary" type="submit" id="exito">Comprar</button>
-    </div>
-
-
-
-  </form>
-
-  <div class="container">
-    <div class="col-12 col-mb-8 col-lg-2 col-lg-m-0 p-3" id="alerta">
 
     </div>
-  </div>
-  <footer class="text-muted">
+    </div> 
+    <form class="needs-validation" novalidate>
+      <div class="container container-fluid g-4">
+        <div class="row">
+          <div class="col-12 col-mb-8 col-lg-4 p-3 ">
+            <label for="direccion" class="form-label">
+              <h5>Direccion</h5>
+            </label>
+            <input type="text" name="direccion" id="direccion" class="form-control" required>
+          </div>
+          <div class="col-12 col-mb-8 col-lg-2 p-3 ">
+            <label for="numero" class="form-label">
+              <h5>Numero</h5>
+            </label>
+            <input type="text" name="numero" id="numero" class="form-control" required>
+          </div>
+          <div class="col-12 col-mb-8 col-lg-4 p-3 ">
+            <label for="esquina" class="form-label">
+              <h5>Esquina</h5>
+            </label>
+            <input type="text" name="esquina" id="esquina" class="form-control" required>
+          </div>
+        </div>
+        <div class="row d-grid">
+          <div class="col-6 sm-9 col-mb-8 col-lg-2 col-lg-m-0 p-3">
+            <label for="detalles" class="form-label">
+              <h5>Mas detalles</h5>
+            </label>
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="container p-2">
+        <h4>Costos</h4>
+        <div class="container d-flex row list-group-item">
+          <h5>Subtotal</h5>
+          Costo unitario del producto por cantidad
+          <h5 class="col container text-end" id="precioProductos"></h5>
+        </div>
+
+        <div class="container d-flex row list-group-item">
+          <h5>Costo de envio</h5>
+          Segun el tipo de envio
+          <h5 class="col container text-end" id="costEnvio"></h5>
+        </div>
+
+        <div class="container d-flex row list-group-item">
+          <div class="d-flex">
+            <h5>Total</h5>
+            <h4 class="container text-end p-0" id="total"></h4>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container p-3">
+        <h4>Forma de pago</h4>
+        <!-- Button trigger modal -->
+        <p >Seleccionar metodo de pago <a type="text" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Seleccionar
+          </a>
+          <p id="metodopago"></p>
+        </p>
+        
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen-lg-down">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Forma de pago</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <input type="radio" name="metodo" id="cuentatarjeta">
+                <label for="cuentatarjeta">Tarjeta de credito</label>
+                <hr>
+                <div class="d-flex p-1">
+                  <div class="col-md-4">
+                    <label for="numerotarjeta" class="form-label">Numero de tarjeta</label>
+                    <input type="text" class="form-control" id="numerotarjeta" required>
+                    <div class="valid-feedback">
+                      Ingrese numero de tarjeta
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="codigoseguridad" class="form-label">Codigo de seguridad</label>
+                    <input type="text" class="form-control" id="codigoseguridad" required>
+                    <div class="valid-feedback">
+                      Ingrese codigo de seguridad
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="vencimiento" class="form-label">Vencimiento (MM/AA)</label>
+                    <input type="text" class="form-control" id="vencimiento" required>
+                    <div class="valid-feedback">
+                      Ingrese fecha de vencimiento
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <input type="radio" id="cuentav" name="metodo" value="cuentav">
+                  <label for="cuentav"><span> Cuenta bancaria</label>
+                </div>
+
+                <hr>
+                <div class="d-flex">
+
+                  <div class="col-md-4 col-lg-8">
+                    <label for="cuentabanco" class="form-label">Numero de cuenta</label>
+                    <input type="text" class="form-control" id="cuentabanco" required>
+                    <div class="valid-feedback">
+                      Ingrese cuenta bancaria
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button id="guardarDatos" type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <button class="container btn btn-primary justify-content-center d-flex w-50" type="submit" id="exito">Finalizar
+          compra</button>
+    </form>
     <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
-        2022</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+      <div class="col-12 col-mb-8 col-lg-2 col-lg-m-0 p-3" id="alerta">
+
+      </div>
     </div>
-  </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-end">
+          <a href="#">Volver arriba</a>
+        </p>
+        <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a
+            Programar</a> -
+          2022</p>
+        <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+      </div>
+    </footer>
+    <div id="spinner-wrapper">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
-  </div>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>

@@ -273,3 +273,8 @@ display: flex;
 #comentarios{
   box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
 }
+
+
+.validacionform{
+  color: red;  
+}
