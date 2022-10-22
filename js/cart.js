@@ -20,7 +20,7 @@ function mostrarCompra(array) {
         const element = array[i];
         lista = `
                 <tr>
-                    <th scope="row"><img src="${element.image}" class="img-fluid" alt="" style="width:70px;"></th>
+                    <th scope="row"><img src="${element.image}" class="" id="imageCart" alt="" style="width:50px;"></th>
                     <td>${element.name}</td>
                     <td>${element.currency} ${element.unitCost}</td>
                     <td><input type="number" name="" id="cantBuy" class="col w-10" style="width:70px;" min="1" value="${element.count}"></td>

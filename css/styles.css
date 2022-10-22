@@ -211,7 +211,7 @@ a.custom-card:hover {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -224,57 +224,107 @@ a.custom-card:hover {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #2db1a6;}
+.dropdown:hover .dropbtn {
+  background-color: #2db1a6;
+}
 
-#tarjeta{
+#tarjeta {
   box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Card de descripcion de productos*/
-#descripcion h2{
-  font-family:'Franklin Gothic medium';
+#descripcion h2 {
+  font-family: 'Franklin Gothic medium';
   margin: 20px;
 }
 
-#descripcion h4{
+#descripcion h4 {
   padding-top: 30px;
 }
 
-#descripcion h1{
-  font-family:Georgia;
+#descripcion h1 {
+  font-family: Georgia;
 }
 
-#descripcion .desc{
+#descripcion .desc {
   padding-top: 50px;
 }
 
-#info-prod img{
+#info-prod img {
   width: auto;
 }
 
-#tarjeta{
+#tarjeta {
   background-color: #f3f3f3;
 }
 
-#prod-relacionados{
-display: flex;
+#prod-relacionados {
+  display: flex;
 }
 
-#prod-relacionados .card{
+#prod-relacionados .card {
   box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-#comentarios{
+#comentarios {
   box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 
-.validacionform{
-  color: red;  
+.validacionform {
+  color: red;
+}
+
+@include media-breakpoint-only(xs) {
+  #imageCart {
+    width: 100px;
+  }
+ }
+
+@media (min-width: 0px) {
+  #imageCart {
+    width: 100px;
+  }
+}
+
+@media (min-width: 576px) {
+  #imageCart {
+    width: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  #imageCart {
+    width: 85px
+  }
+}
+
+
+@media (min-width: 992px) {
+  #imageCart {
+    width: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #imageCart {
+    width: 75px;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  #imageCart {
+    width: 70px;
+  }
 }
