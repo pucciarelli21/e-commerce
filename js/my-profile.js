@@ -61,7 +61,12 @@ function datosUSer(array1, array2){
     let foto = JSON.parse(localStorage.getItem("fotoPerfil"));
     array2 = foto;
     perfilImagen.push(array2)
+    let cambio = document.getElementById("fotoPerfil").src
+    if (cambio == "/img/img_perfil.png") {
+        document.getElementById("fotoPerfil").src ="/img/img_perfil.png"
+    }else{
     document.getElementById("fotoPerfil").src =array2
+    }
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{
