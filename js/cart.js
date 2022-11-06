@@ -56,7 +56,7 @@ function costEnvio() {
     let premium = document.getElementById("premium");
     let express = document.getElementById("express");
     let precio = JSON.parse(localStorage.getItem("total"));
-    
+
     impuestoEnvio = precio * (5 / 100)
     total = precio + impuestoEnvio
     document.getElementById("total").innerHTML = "USD " + total
@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 `
                 document.getElementById("alerta").innerHTML = alerta
             }
+            //Validacion de los metodos de pago
             if (nTarjeta.value == "" && codTarjeta.value == "" && fechaTarjeta.value == "" || cuentBancaria == "") {
                 mensajeMetodopago.innerHTML = "Debe ingresar metodo de pago"
                 mensajeMetodopago.classList.add("validacionform")
@@ -140,6 +141,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let metTarjeta = document.getElementById("cuentatarjeta");
     let metBanco = document.getElementById("cuentav");
 
+    //Si el usuario elige el metodo de pago  tarjeta
     metTarjeta.addEventListener("click", () => {
         cuentBancaria.setAttribute("disabled", "");
         cuentBancaria.value = "";
@@ -148,6 +150,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         fechaTarjeta.removeAttribute("disabled", "");
     })
 
+    //Si el usuario elige el metodo de pago cuenta bancaria
     metBanco.addEventListener("click", () => {
         nTarjeta.setAttribute("disabled", "");
         codTarjeta.setAttribute("disabled", "");
@@ -157,10 +160,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         fechaTarjeta.value = "";
         cuentBancaria.removeAttribute("disabled", "");
     })
+
+
 });
 
 
-//Estilo validacion sacado de Boostrap
+//Validacion sacado de Boostrap
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
