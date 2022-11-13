@@ -133,8 +133,8 @@ function productos (data){
         
         let nombreProducto = data[i].name.toLowerCase();
         if(  //Filtro por rango de precio
-            ((minCount == undefined) || (minCount != undefined && parseInt(data[i].cost) >= minCount)) &&
-            ((maxCount == undefined) || (maxCount != undefined && parseInt(data[i].cost) <= maxCount)) &&
+            ((minCount == undefined) || (minCount != undefined && parseInt(data[i].productCount) >= minCount)) &&
+            ((maxCount == undefined) || (maxCount != undefined && parseInt(data[i].productCount) <= maxCount)) &&
 
              //Filtro de busqueda por nombre
             (buscador == undefined) || ((nombreProducto.includes(buscador)))) {

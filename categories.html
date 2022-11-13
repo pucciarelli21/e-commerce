@@ -10,6 +10,11 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .img-thumbnail{
+      background-color: rgb(184, 184, 199);
+    }
+  </style>
 </head>
 
 <body>
@@ -69,15 +74,15 @@
             <div class="col">
               <p class="font-weight-normal text-end my-2">Cant.</p>
             </div>
-            <div class="col">
-              <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+            <div class="col-4 col-sm-3">
+              <input class="form-control" type="number" placeholder="min." min="1" id="rangeFilterCountMin">
             </div>
-            <div class="col">
-              <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+            <div class="col-4 col-sm-3">
+              <input class="form-control" type="number" placeholder="máx." min="1" id="rangeFilterCountMax">
             </div>
-            <div class="col-3 p-0">
+            <div class="col-4 p-0">
               <div class="btn-group" role="group">
-                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                <button class="btn btn-light" id="rangeFilterCount">Filtrar</button>
                 <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
               </div>
             </div>
