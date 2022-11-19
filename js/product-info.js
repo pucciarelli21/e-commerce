@@ -1,7 +1,7 @@
 let product = {};
 let comentarios = [];
 
-
+//Desafiate 4
 //Funcion que imprime el carrusel y data del producto
 function mostrarImagenes(array) {
     carrusel = `
@@ -63,7 +63,7 @@ function mostrarRelatedProducts(array) {
 }
 
 
-
+//Desafiate 3
 
 function nuevoComentario() {
     let dateTime = new Date();

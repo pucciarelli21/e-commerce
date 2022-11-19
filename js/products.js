@@ -136,6 +136,7 @@ function productos (data){
             ((minCount == undefined) || (minCount != undefined && parseInt(data[i].productCount) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(data[i].productCount) <= maxCount)) &&
 
+            //Desafiate 2
              //Filtro de busqueda por nombre
             (buscador == undefined) || ((nombreProducto.includes(buscador)))) {
 
