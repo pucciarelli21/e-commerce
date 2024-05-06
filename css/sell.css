@@ -1,0 +1,57 @@
+.costos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtotal h5, p{
+    margin: 0;
+}
+
+#productName{
+    width: 60%;
+}
+
+.content{
+    margin: 0.5rem 0rem 1rem 0rem;
+}
+
+#productName{
+    max-width: 40%;
+}
+
+#file-upload, #productDescription{
+    max-width: 50%;
+}
+
+#productCostInput, #productCountInput{
+    max-width: 10%;
+}
+
+#productCurrency, #productCategory{
+    max-width: 20%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    #productName{
+        min-width:70%;
+    }
+
+    #file-upload, #productDescription{
+        max-width: 100%;
+    }
+
+    #productCostInput, #productCountInput{
+        max-width: 40%;
+    }
+
+    #productCurrency, #productCategory{
+        max-width: 60%;
+    }
+
+    button{
+        width: 30%;
+    }
+}

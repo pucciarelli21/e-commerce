@@ -33,7 +33,7 @@ nav a {
   padding: 5em inherit;
   margin-bottom: 0;
   background-color: #53C0FB;
-  background: url('../img/cover_back.png');
+  background: url('../img/Banner-ecommerce-2019-simpson-studio.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -179,6 +179,8 @@ main {
   min-height: calc(100vh - 210px);
 }
 
+
+
 a.custom-card,
 a.custom-card:hover {
   color: inherit;
@@ -238,110 +240,10 @@ a.custom-card:hover {
   background-color: #2db1a6;
 }
 
-#tarjeta {
-  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.2);
+
+
+.banner{
+    width: 100%;
+    height: auto;
 }
 
-/* Card de descripcion de productos*/
-#descripcion h2 {
-  font-family: 'Franklin Gothic medium';
-  margin: 20px;
-}
-
-#descripcion h4 {
-  padding-top: 30px;
-}
-
-#descripcion h1 {
-  font-family: Georgia;
-}
-
-#descripcion .desc {
-  padding-top: 50px;
-}
-
-#info-prod img {
-  width: auto;
-}
-
-#tarjeta {
-  background-color: #f3f3f3;
-}
-
-#prod-relacionados {
-  display: flex;
-}
-
-#prod-relacionados .card {
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-#comentarios {
-  box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-
-.validacionform {
-  color: red;
-}
-
-@include media-breakpoint-only(xs) {
-  #imageCart {
-    width: 100px;
-  }
- }
-
-@media (min-width: 0px) {
-  #imageCart {
-    width: 100px;
-  }
-}
-
-@media (min-width: 576px) {
-  #imageCart {
-    width: 90px;
-  }
-}
-
-@media (min-width: 768px) {
-  #imageCart {
-    width: 85px
-  }
-}
-
-
-@media (min-width: 992px) {
-  #imageCart {
-    width: 80px;
-  }
-}
-
-@media (min-width: 1200px) {
-  #imageCart {
-    width: 75px;
-  }
-}
-
-
-@media (min-width: 1400px) {
-  #imageCart {
-    width: 70px;
-  }
-}
-
-
-body {
-  background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(213, 234, 246, 1) 100%);
-}
-
-.btn-block {
-  border: 0px;
-  background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 9%, rgba(213, 234, 255, 0) 100%);
-}
-
-.list-group-item {
-  background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 231, 1) 100%);
-}

@@ -1,0 +1,147 @@
+.carrousell-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-carrousell{
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+
+.descripcion{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.titile{
+    text-align:left;
+    max-width: max-content;
+}
+
+.title h5{
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.precio{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    text-wrap: 400px;
+}
+
+.precio-movile{
+    display: none;
+}
+
+#prod-relacionados{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0rem 2rem 0rem;
+}
+
+.prod-container{
+    max-width: 200px;
+    margin: 0.5rem 1rem 2rem 1rem;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgb(163, 163, 163);
+    border-radius: 0.5rem;
+}
+
+.prod-container:hover{
+    opacity: 0.7;
+}
+
+.card-text{
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+}
+
+#comentarios{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#comentarios .card{
+    box-shadow: 0px 0px 4px gray;
+    margin: 0.5rem;
+}
+
+.new-comentario label{
+    margin: 0.5rem 0rem 0.3rem 0rem;
+}
+
+#descripcion-comentario{
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.form-group label{
+    margin: 1rem 0rem 0.3rem 0rem;
+}
+
+#puntaje{
+    max-width: 20%;
+    border-radius: 0.5rem;
+}
+
+#formulario button{
+    position: relative;
+    left: 30%;
+    margin: 2rem 0rem 0rem 0rem;
+    padding: 0.3rem 3.5rem 0.3rem 3.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .descripcion{
+        display: flex;
+        justify-content: start;
+        text-wrap: 400px;
+    }
+
+    .precio{
+        display: flex;
+        flex-direction: row;
+        padding-top: 1rem;
+    }
+
+    .img-carrousell{
+        max-width: 400px;
+    }
+
+    .precio{
+        display: none;
+    }
+
+    .precio-movile{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+
+    .prod-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 150px;
+        margin: 0.5rem;
+    }
+
+    .card-text{
+        font-size: 16px;
+        margin-top: 0.5rem;
+        padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+    }
+
+    #puntaje{
+        max-width: 60%;
+    }
+    
+}

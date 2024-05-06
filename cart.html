@@ -9,6 +9,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/cart.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,28 +45,24 @@
       </div>
     </div>
   </nav>
-  <div class="container-fluid m-0">
-    <div class="container mt-5 p3">
-      <div class="text-center p4">
-        <h2>Carrito de compras</h2>
-      </div>
-      <h4>Articulos a comprar</h4>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Costo</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Subtotal</th>
-          </tr>
-        </thead>
-        <tbody id="compras">
 
-        </tbody>
-      </table>
-    </div>
-    <hr>
+  <div class="container">
+    <h2 class="text-center mt-4 mb-4">Carrito de compras</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Costo</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="compras">
+
+      </tbody>
+    </table>
+
     <div class="container">
       <h4>Tipo de envio</h4>
       
@@ -86,59 +83,66 @@
 
     </div>
     </div> 
-    <form class="needs-validation" novalidate>
-      <div class="container container-fluid g-4">
-        <div class="row">
-          <div class="col-12 col-mb-8 col-lg-4 p-3 ">
-            <label for="direccion" class="form-label">
-              <h5>Direccion</h5>
-            </label>
-            <input type="text" name="direccion" id="direccion" class="form-control" required>
-          </div>
-          <div class="col-12 col-mb-8 col-lg-2 p-3 ">
-            <label for="numero" class="form-label">
-              <h5>Numero</h5>
-            </label>
-            <input type="text" name="numero" id="numero" class="form-control" required>
-          </div>
-          <div class="col-12 col-mb-8 col-lg-4 p-3 ">
-            <label for="esquina" class="form-label">
-              <h5>Esquina</h5>
-            </label>
-            <input type="text" name="esquina" id="esquina" class="form-control" required>
-          </div>
+    <form class="container needs-validation" novalidate>
+
+      <div class="info-personal">
+        
+        <div class="direccion">
+          <label for="direccion" class="form-label">
+            <h5>Direccion</h5>
+          </label>
+          <input type="text" name="direccion" id="direccion" class="form-control" required>
         </div>
-        <div class="row d-grid">
-          <div class="col-6 sm-9 col-mb-8 col-lg-2 col-lg-m-0 p-3">
-            <label for="detalles" class="form-label">
-              <h5>Mas detalles</h5>
-            </label>
-            <textarea name="" id="" cols="30" rows="5"></textarea>
-          </div>
+
+        <div class="numero">
+          <label for="numero" class="form-label">
+            <h5>Numero</h5>
+          </label>
+          <input type="text" name="numero" id="numero" class="form-control" required>
+        </div>
+
+        <div class="esquina">
+          <label for="esquina" class="form-label">
+            <h5>Esquina</h5>
+          </label>
+          <input type="text" name="esquina" id="esquina" class="form-control" required>
         </div>
       </div>
 
-      <div class="container p-2">
-        <h4>Costos</h4>
-        <div class="container d-flex row list-group-item">
-          <h5>Subtotal</h5>
-          Costo unitario del producto por cantidad
-          <h5 class="col container text-end" id="precioProductos"></h5>
-        </div>
+      <div class="more-details">
+          <h5>Mas detalles</h5>
+        <textarea name="detalles" id="" cols="38" rows="5"></textarea>
+      </div>
 
-        <div class="container d-flex row list-group-item">
-          <h5>Costo de envio</h5>
-          Segun el tipo de envio
-          <h5 class="col container text-end" id="costEnvio"></h5>
-        </div>
-
-        <div class="container d-flex row list-group-item">
-          <div class="d-flex">
-            <h5>Total</h5>
-            <h4 class="container text-end p-0" id="total"></h4>
+      <div class="container cost-total mt-4">
+        <div class="list-group-item costos">
+          <div class="subtotal">
+            <h5>Subtotal</h5>
+            <p>Costo unitario del producto por cantidad</p>
+          </div>
+          <div>
+            <h5 id="precioProductos"></h5>
           </div>
         </div>
-
+  
+        <div class="list-group-item costos">
+          <div class="subtotal">
+            <h5>Costo de envio</h5>
+            <p>Segun el tipo de envio</p>
+          </div>
+          <div>
+            <h5 id="costEnvio"></h5>
+          </div>
+        </div>
+  
+        <div class="list-group-item costos">
+          <div class="subtotal">
+            <h5>Total</h5>
+          </div>
+          <div>
+            <strong id="total"></strong>
+          </div>
+        </div>
       </div>
 
       <div class="container p-3">
@@ -224,14 +228,8 @@
       </div>
     </div>
     <footer class="text-muted">
-      <div class="container">
-        <p class="float-end">
-          <a href="#">Volver arriba</a>
-        </p>
-        <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a
-            Programar</a> -
-          2022</p>
-        <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+      <div class="container text-center">
+        <p>Copyright © Gaston Pucciarelli 2024 All rights reserved.</p>
       </div>
     </footer>
     <div id="spinner-wrapper">

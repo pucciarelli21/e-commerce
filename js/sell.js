@@ -7,7 +7,7 @@ let PESO_CURRENCY = "Pesos Uruguayos (UYU)";
 let DOLLAR_SYMBOL = "USD ";
 let PESO_SYMBOL = "UYU ";
 let PERCENTAGE_SYMBOL = '%';
-let MSG = "FUNCIONALIDAD NO IMPLEMENTADA";
+let MSG = "VENTA REALIZADA CON EXITO!";
 
 //Función que se utiliza para actualizar los costos de publicación
 function updateTotalCosts(){
@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function(e){
     sellForm.addEventListener("submit", function(e){
 
         e.preventDefault(); 
-        e.preventDefault();
 
         let productNameInput = document.getElementById("productName");
         let productCategory = document.getElementById("productCategory");
@@ -143,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     
                 msgToShowHTML.innerHTML = msgToShow;
                 document.getElementById("alertResult").classList.add("show");
+                
             });
         }
     });

@@ -1,0 +1,75 @@
+#compras img{
+    max-width: 80px;
+}
+
+#cantBuy{
+    width: 20%;
+}
+
+.info-personal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.direccion{
+    margin: 1rem 0rem 0rem 1rem;
+    width: 30%;
+}
+
+.numero{
+    margin: 1rem 0rem 0rem 1rem;
+    width: 6%;
+}
+
+.esquina{
+    margin: 1rem 0rem 0rem 1rem;
+    width: 30%;
+}
+
+.more-details{
+    margin: 1.5rem 0rem 0rem 1rem;
+}
+
+.costos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 996px) {
+    #compras img{
+        max-width: 60px;
+    }
+
+    #compras p{
+        font-size: 13px;
+    }
+
+    #compras h4{
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    #cantBuy{
+        max-width: 40%;
+    }
+
+    #compras{
+    text-align: center;
+    }
+
+    .direccion{
+        margin: 1rem 0rem 0rem 1rem;
+        width: 60%;
+    }
+    
+    .numero{
+        margin: 1rem 0rem 0rem 1rem;
+        width: 20%;
+    }
+    
+    .esquina{
+        margin: 1rem 0rem 0rem 1rem;
+        width: 60%;
+    }
+}

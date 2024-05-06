@@ -20,10 +20,10 @@ function mostrarCompra(array) {
         const element = array[i];
         lista = `
                 <tr>
-                    <th scope="row"><img src="${element.image}" class="" id="imageCart" alt="" style="width:50px;"></th>
-                    <td>${element.name}</td>
-                    <td>${element.currency} ${element.unitCost}</td>
-                    <td><input type="number" name="" id="cantBuy" class="col w-10" style="width:70px;" min="1" value="${element.count}"></td>
+                    <th scope="row"><img src="${element.image}" class="" id="imageCart" alt="img"></th>
+                    <td><p>${element.name}</p></td>
+                    <td><p>${element.currency} ${element.unitCost}</p></td>
+                    <td><input type="number" name="" id="cantBuy" min="1" value="${element.count}"></td>
                     <td id="subtotal"><h4>${element.currency} ${element.unitCost}</h4></td>
                 </tr>
         `

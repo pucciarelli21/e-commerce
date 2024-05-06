@@ -8,7 +8,7 @@ let telefono = document.getElementById("tel")
 let datos = [];
 let perfilImagen = [];
 
-//Desafiate 7 => Poner y/o Cambiar foto de perfil
+//Poner y/o Cambiar foto de perfil
 
 //Funcion que muestra la imagen
 function mostrarImagen(event) {

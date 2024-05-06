@@ -1,0 +1,46 @@
+.top{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0rem 1rem 0rem;
+}
+
+.top img{
+    width: 100px;
+    height: 100px;
+}
+
+.data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.data div{
+    width: 40%;
+}
+
+.data div:nth-child(2){
+    margin-left: 2rem;
+}
+
+#cambiarFoto{
+    max-width: 600px;
+}
+
+.foto-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .data div{
+        width: 80%;
+    }
+    .data div:nth-child(2){
+        margin-left: 0rem;
+    }
+
+}

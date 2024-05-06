@@ -1,16 +1,13 @@
 catID = localStorage.getItem("catID");
 prodID = localStorage.getItem("prodID");
 
-const CATEGORIES_URL = "https://japceibal.github.io/emercado-api/cats/cat.json";
-const PUBLISH_PRODUCT_URL = "https://japceibal.github.io/emercado-api/sell/publish.json";
-const PRODUCTS_URL = `https://japceibal.github.io/emercado-api/cats_products/${catID}.json`;
-const PRODUCT_INFO_URL = `https://japceibal.github.io/emercado-api/products/${prodID}.json`;
-const PRODUCT_INFO_COMMENTS_URL = `https://japceibal.github.io/emercado-api/products_comments/${prodID}.json`;
-const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/25801.json";
-const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
-const EXT_TYPE = ".json";
-
-const CAT_AUTOS = "https://japceibal.github.io/emercado-api/cats_products/101.json";
+const CATEGORIES_URL = "https://pucciarelli21.github.io/APIS-Pruebas/categorias/categorias.json";
+const PUBLISH_PRODUCT_URL = "https://pucciarelli21.github.io/APIS-Pruebas/carrito/1.json";
+const PRODUCTS_URL = `https://pucciarelli21.github.io/APIS-Pruebas/categorias-productos/${catID}.json`;
+const PRODUCT_INFO_URL = `https://pucciarelli21.github.io/APIS-Pruebas/productos/${prodID}.json`;
+const PRODUCT_INFO_COMMENTS_URL = `https://pucciarelli21.github.io/APIS-Pruebas/productos-comentarios/${prodID}.json`;
+const CART_INFO_URL = "https://pucciarelli21.github.io/APIS-Pruebas/carrito/1.json";
+const CART_BUY_URL = "https://pucciarelli21.github.io/APIS-Pruebas/carrito/buy.json";
 
 let showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";

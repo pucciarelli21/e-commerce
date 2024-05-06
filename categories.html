@@ -10,15 +10,9 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <style>
-    .img-thumbnail{
-      background-color: rgb(184, 184, 199);
-    }
-
-    .btn-group-toggle label{
-      border: 1px solid rgb(201, 201, 201);
-    }
-  </style>
+  <link href="css/categories.css" rel="stylesheet">
+  
+  
 </head>
 
 <body>
@@ -55,58 +49,25 @@
     </div>
   </nav>
   <main>
-    <div class="text-center p-4">
-      <h2>Categorías</h2>
-      <p class="lead">Verás aquí todas las categorías del sitio.</p>
+    <img class="img-fluid banner" src="img/ecommerce-banner.jpg" alt="banner">
+    <div class="buttons">
+        <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+          <input type="radio" class="btn-check" name="options" id="sortAsc">
+          <label class="btn btn-light" for="sortAsc">A-Z</label>
+          <input type="radio" class="btn-check" name="options" id="sortDesc">
+          <label class="btn btn-light" for="sortDesc">Z-A</label>
+          <input type="radio" class="btn-check" name="options" id="sortByCount">
+          <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1"></i></label>
+        </div>
     </div>
-    <div class="container col-10 col-sm-11">
-      <div class="row">
-        <div class="col text-end">
-          <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
-            <input type="radio" class="btn-check" name="options" id="sortAsc">
-            <label class="btn btn-light" for="sortAsc">A-Z</label>
-            <input type="radio" class="btn-check" name="options" id="sortDesc">
-            <label class="btn btn-light" for="sortDesc">Z-A</label>
-            <input type="radio" class="btn-check" name="options" id="sortByCount">
-            <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1"></i></label>
-          </div>
+    <div class="contenedor">
+       <div class="list-group" id="cat-list-container">
         </div>
-      </div>
-      <div class="row col-12 col-sm-12">
-        <div class="col-lg-6 offset-lg-6 col-md-12 mb-1 container">
-          <div class="row container p-0 m-0">
-            <div class="col">
-              <p class="font-weight-normal text-end my-2">Cant.</p>
-            </div>
-            <div class="col-4 col-sm-3">
-              <input class="form-control" type="number" placeholder="min." min="1" id="rangeFilterCountMin">
-            </div>
-            <div class="col-4 col-sm-3">
-              <input class="form-control" type="number" placeholder="máx." min="1" id="rangeFilterCountMax">
-            </div>
-            <div class="col-4 p-0">
-              <div class="btn-group" role="group">
-                <button class="btn btn-light" id="rangeFilterCount">Filtrar</button>
-                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row p-0">
-        <div class="list-group" id="cat-list-container">
-        </div>
-      </div>
     </div>
   </main>
   <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
-        2022</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    <div class="container text-center">
+      <p>Copyright © Gaston Pucciarelli 2024 All rights reserved.</p>
     </div>
   </footer>
   <div id="spinner-wrapper">

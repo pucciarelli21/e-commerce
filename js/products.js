@@ -15,7 +15,7 @@ id = localStorage.getItem("catID")
 // Fetch
 
 document.addEventListener("DOMContentLoaded", async function(){
-    let listaProductos = await getJSONData(`https://japceibal.github.io/emercado-api/cats_products/${id}.json`);
+    let listaProductos = await getJSONData(`https://pucciarelli21.github.io/APIS-Pruebas/categorias-productos/${id}.json`);
     if(listaProductos.status === "ok"){
         data = listaProductos.data.products
     }
@@ -136,24 +136,18 @@ function productos (data){
             ((minCount == undefined) || (minCount != undefined && parseInt(data[i].productCount) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(data[i].productCount) <= maxCount)) &&
 
-            //Desafiate 2
              //Filtro de busqueda por nombre
             (buscador == undefined) || ((nombreProducto.includes(buscador)))) {
 
                 body+=`
                 <div onclick="setProdID(${data[i].id})" class="list-group-item list-group-item-action cursor-active">
-                    <div class="row">
-                        <div class="col-12 col-sm-7 col-lg-3">
-                            <img src="${data[i].image}" alt="" class="img-thumbnail">
-                        </div>
-                        <div class="col-12 col-sm-5 col-lg-7">
-                            <div class=" w-100 justify-content-between">
-                                <h4 class="mb-1">${data[i].name} - ${data[i].cost} ${data[i].currency}</h4>
-                                
-                            </div>
-                            <p class="mb-1">${data[i].description}</p>
-                            <small class="text-muted">${data[i].soldCount} artículos</small>
-                        </div>
+                    <div class="img-cat">
+                        <img src="${data[i].image}" alt="img" class="img-thumbnail">
+                    </div>
+                    <div class="desc-cat">
+                        <h4 class="mb-1 mt-2">${data[i].name} - <span> ${data[i].cost} ${data[i].currency}</h3></span<h4>
+                        <p class="mb-1">${data[i].description}</p>
+                        <small class="text-muted">${data[i].soldCount} artículos</small>
                     </div>
                 </div>
                 `

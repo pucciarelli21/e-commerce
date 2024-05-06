@@ -1,35 +1,37 @@
 let product = {};
 let comentarios = [];
 
-//Desafiate 4
 //Funcion que imprime el carrusel y data del producto
 function mostrarImagenes(array) {
     carrusel = `
         <div class="carousel-item active">
-        <img src="${array.images[0]}" alt="" class=" d-block w-100  img-fluid">
+        <img src="${array.images[0]}" alt="img" class="img-carrousell">
         </div>
     `
     nombreCarruselProd = ""
     description = ""
     description += `
-            <div>
-                <div>
+            <div class="descripcion">
+                <div class="titile">
                     <h2>${array.name}</h2>
+                    <p>${array.description}</p>
                 </div>
-                <div class="justify-content-center">
-                    <h4>${array.description}</h4>
+                <div class="precio">
+                    <h3 class="text-end" >${array.currency} ${array.cost}</h3>
+                    <h5 class="text-end">Total vendidos ${array.soldCount}</h5>
                 </div>
             </div>
-                <h2 class="col-12 col-lg-12 p-0">Precio: ${array.currency} ${array.cost}</h2>
-            <div class="d-flex">
-                <h5 class="col-8 p-0">Total vendidos ${array.soldCount}</h5>
-            </div>
+            <div class="precio-movile">
+                    <h4 class="text-end" >${array.currency} ${array.cost}</h4>
+                    <p class="text-end">Total vendidos ${array.soldCount}</p>
+                </div>
+            
                 `
     for (let i = 1; i < array.images.length; i++) {
         let image = array.images
         carrusel += `
             <div class="carousel-item">
-              <img src="${image[i]}" alt="" class="d-block w-100 img-fluid">
+              <img src="${image[i]}" alt="img" class="img-carrousell">
             </div>
             
         `
@@ -48,22 +50,19 @@ function mostrarRelatedProducts(array) {
     for (let i = 0; i < array.relatedProducts.length; i++) {
         let prodRelacionado = array.relatedProducts[i];
         contenidoHTML += `
-    <div class="btn" style="margin:10px 10px 0px 10px;" onclick="setProdID(${prodRelacionado.id})">   
-        <div class="card">
+
+
+    <div class="prod-container" onclick="setProdID(${prodRelacionado.id})">   
         <img src=" `+ prodRelacionado.image + `" class="card-img-top" alt="Imagen">
-            <div class="card-body">
-            <h5 class="card-text">`+ prodRelacionado.name + `</h5>
-            </div>
-        </div>
+        <h5 class="card-text">`+ prodRelacionado.name + `</h5>
     </div>
+    
         `
         document.getElementById("prod-relacionados").innerHTML = contenidoHTML;
 
     }
 }
 
-
-//Desafiate 3
 
 function nuevoComentario() {
     let dateTime = new Date();
@@ -96,7 +95,7 @@ function mostrarComentarios() {
     for (let i = comentarios.length - 1; i >= 0; i--) {
         let comentario = comentarios[i];
         html += ` 
-        <div class= "card deck mt-4" >
+        <div class= "card" >
          <div class="card-body">
                     <h5 class="card-title"> <i class='far fa-user-circle' style='font-size:24px'></i> ${comentario.user}</h5>
                     <p class="card-text">${comentario.description}</p>
